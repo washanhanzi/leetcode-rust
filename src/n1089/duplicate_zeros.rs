@@ -20,7 +20,7 @@ fn duplicate_zeros(arr: &mut Vec<i32>) {
 //time complexity: O(N), space complexity: O(N)
 fn duplicate_zeros_naive(arr: &mut Vec<i32>) {
     //use a vec to store the values waiting to write into arr
-    let mut waiting_seq: Vec<i32> = vec![];
+    let mut waiting_seq: Vec<i32> = Vec::with_capacity(arr.len());
     for v in arr.iter_mut() {
         if waiting_seq.len() != 0 {
             //if the value is 0, we need an additional 0 to write
