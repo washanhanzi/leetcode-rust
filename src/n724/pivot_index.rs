@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/find-pivot-index/
 pub fn pivot_index(nums: Vec<i32>) -> i32 {
-    let mut right_sum = nums.iter().sum::<i32>();
+    let right_sum = nums.iter().sum::<i32>();
     let mut left_sum = 0;
     for (k, &v) in nums.iter().enumerate() {
         let right_sum = right_sum - v;
