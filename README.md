@@ -1,5 +1,6 @@
 # leetCode-rust
 
+- [205. Isomorphic Strings](./src/n205/is_isomorphic.rs)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
 - [724. Find Pivot Index](./src/n724/pivot_index.rs)
 - [977. Squares of a Sorted Array](./src/n977/sorted_squares.rs)
