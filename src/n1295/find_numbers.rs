@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
-pub fn find_numbers(nums: Vec<i32>) -> i32 {
+fn find_numbers(nums: Vec<i32>) -> i32 {
     let mut res = 0;
     for v in nums {
         //let digits = v.to_string().len(); will get 0ms runtime

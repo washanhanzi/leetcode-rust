@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/max-consecutive-ones/
-pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32 {
+fn find_max_consecutive_ones(nums: Vec<i32>) -> i32 {
     let (mut cur, mut max) = (0, 0);
     for v in nums {
         if v == 1 {

@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/squares-of-a-sorted-array/
 //use the two pointer solution
-pub fn sorted_squares(nums: Vec<i32>) -> Vec<i32> {
+fn sorted_squares(nums: Vec<i32>) -> Vec<i32> {
     let mut res = vec![0; nums.len()];
     let len = nums.len();
     let mut l = 0;
