@@ -1,4 +1,4 @@
-pub fn duplicate_zeros(arr: &mut Vec<i32>) {
+fn duplicate_zeros(arr: &mut Vec<i32>) {
     let mut count = arr.iter().filter(|&&d| d == 0).count();
     if count > 0 {
         let length = arr.len();
@@ -18,7 +18,7 @@ pub fn duplicate_zeros(arr: &mut Vec<i32>) {
 }
 
 //time complexity: O(N), space complexity: O(N)
-pub fn duplicate_zeros_naive(arr: &mut Vec<i32>) {
+fn duplicate_zeros_naive(arr: &mut Vec<i32>) {
     //use a vec to store the values waiting to write into arr
     let mut waiting_seq: Vec<i32> = vec![];
     for v in arr.iter_mut() {
@@ -51,23 +51,29 @@ mod test {
     }
 
     #[test]
-    fn case1() {
-        let mut input = vec![1, 0, 2, 3, 0, 4, 5, 0];
-        duplicate_zeros(&mut input);
-        assert_eq!(input, vec![1, 0, 0, 2, 3, 0, 0, 4])
+    fn test() {
+        run_test(duplicate_zeros_naive);
+        run_test(duplicate_zeros);
     }
 
-    #[test]
-    fn case2() {
-        let mut input = vec![1, 2, 3];
-        duplicate_zeros(&mut input);
-        assert_eq!(input, vec![1, 2, 3])
-    }
-
-    #[test]
-    fn case3() {
-        let mut input = vec![0, 4, 1, 0, 0, 8, 0, 0, 3];
-        duplicate_zeros(&mut input);
-        assert_eq!(input, vec![0, 0, 4, 1, 0, 0, 0, 0, 8])
+    fn run_test(f: fn(&mut Vec<i32>)) {
+        let mut data: Vec<TestData> = vec![
+            TestData {
+                got: vec![1, 0, 2, 3, 0, 4, 5, 0],
+                want: vec![1, 0, 0, 2, 3, 0, 0, 4],
+            },
+            TestData {
+                got: vec![1, 2, 3],
+                want: vec![1, 2, 3],
+            },
+            TestData {
+                got: vec![0, 4, 1, 0, 0, 8, 0, 0, 3],
+                want: vec![0, 0, 4, 1, 0, 0, 0, 0, 8],
+            },
+        ];
+        for d in data.iter_mut() {
+            f(&mut d.got);
+            assert_eq!(d.got, d.want);
+        }
     }
 }
