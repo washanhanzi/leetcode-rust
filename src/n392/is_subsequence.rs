@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/is-subsequence/
 //TODO recursive and dynamic programming
-//time compexity: O(N), space complexity: O(N)
+//time complexity: O(N), space complexity: O(N)
 //chars().nth(index) is a linear operation, when doing the operation in a loop, it ends up with a quadratic time complexity
 pub fn is_subsequence_naive(s: String, t: String) -> bool {
     if s.is_empty() {
