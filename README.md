@@ -1,5 +1,6 @@
 # leetCode-rust
 
+- [21. Merge Two Sorted Lists](./src/n21/merge_two_lists.rs)
 - [205. Isomorphic Strings](./src/n205/is_isomorphic.rs)
 - [392. Is Subsequence](./src/n392)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
