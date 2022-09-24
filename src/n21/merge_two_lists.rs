@@ -48,7 +48,7 @@ fn recursive(head: &mut ListNode, cur1: Option<Box<ListNode>>, cur2: Option<Box<
 }
 
 //copied, a more elegant solution
-fn merge_two_lists_elegant(
+pub fn merge_two_lists_elegant(
     list1: Option<Box<ListNode>>,
     list2: Option<Box<ListNode>>,
 ) -> Option<Box<ListNode>> {
@@ -119,9 +119,16 @@ mod test {
         ];
         for d in data {
             let [list1, list2] = d.input;
-            let head = merge_two_lists(list1, list2);
+            let head = merge_two_lists(list1.clone(), list2.clone());
             assert_eq!(
                 compare(&head, &d.output),
+                true,
+                "test case failed: {}",
+                d.name
+            );
+            let head2 = merge_two_lists_elegant(list1.clone(), list2.clone());
+            assert_eq!(
+                compare(&head2, &d.output),
                 true,
                 "test case failed: {}",
                 d.name

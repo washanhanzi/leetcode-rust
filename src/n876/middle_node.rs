@@ -41,7 +41,7 @@ pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     }
 }
 
-fn middle_node_elegant(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+pub fn middle_node_elegant(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     let mut t: &Option<Box<ListNode>> = &head;
     let mut h: &Option<Box<ListNode>> = &head;
     while h.is_some() && (&h.as_ref().unwrap().next).is_some() {
@@ -60,7 +60,17 @@ mod test {
     fn case1() {
         let input = ListNode::from_arr(vec![1, 2, 3, 4, 5]);
         assert_eq!(
-            compare(&middle_node(input), &ListNode::from_arr(vec![3, 4, 5])),
+            compare(
+                &middle_node(input.clone()),
+                &ListNode::from_arr(vec![3, 4, 5])
+            ),
+            true
+        );
+        assert_eq!(
+            compare(
+                &middle_node_elegant(input.clone()),
+                &ListNode::from_arr(vec![3, 4, 5])
+            ),
             true
         )
     }
