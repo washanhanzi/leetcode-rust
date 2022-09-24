@@ -2,6 +2,7 @@
 
 - [21. Merge Two Sorted Lists](./src/n21/merge_two_lists.rs)
 - [205. Isomorphic Strings](./src/n205/is_isomorphic.rs)
+- [206. Reverse Linked List](./src/n206/reverse_list.rs)
 - [392. Is Subsequence](./src/n392)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
 - [724. Find Pivot Index](./src/n724/pivot_index.rs)
