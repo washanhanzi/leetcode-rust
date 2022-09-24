@@ -7,6 +7,7 @@ mod n21;
 mod n392;
 mod n485;
 mod n724;
+mod n876;
 mod n977;
 
 fn main() {

@@ -48,7 +48,7 @@ fn recursive(head: &mut ListNode, cur1: Option<Box<ListNode>>, cur2: Option<Box<
 }
 
 //copied, a more elegant solution
-pub fn merge_two_lists_elegant(
+fn merge_two_lists_elegant(
     list1: Option<Box<ListNode>>,
     list2: Option<Box<ListNode>>,
 ) -> Option<Box<ListNode>> {
