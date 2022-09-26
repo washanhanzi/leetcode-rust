@@ -6,6 +6,20 @@ fn recusive(nums: Vec<i32>, begin: usize, target: i32) -> i32 {
     if nums.is_empty() {
         return -1;
     }
+    //hack for length 1 and length 2 nums
+    if nums.len() == 1 {
+        return if nums[0] == target { begin as i32 } else { -1 };
+    }
+    if nums.len() == 2 {
+        if nums[0] == target {
+            return begin as i32;
+        }
+        if nums[1] == target {
+            return begin as i32 + 1;
+        }
+    } else {
+        return -1;
+    }
     let mid = nums.len() / 2;
     if nums[mid] == target {
         return (begin + mid) as i32;
