@@ -8,6 +8,7 @@
 - [392. Is Subsequence](./src/n392)
 - [409. Longest Palindrome](./src/n409/longest_palindrome.rs)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
+- [704. Binary Search](./src/n704/search.rs)
 - [724. Find Pivot Index](./src/n724/pivot_index.rs)
 - [876. Middle of the Linked List](./src/)
 - [977. Squares of a Sorted Array](./src/n977/sorted_squares.rs)

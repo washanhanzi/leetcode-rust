@@ -9,6 +9,7 @@ mod n21;
 mod n392;
 mod n409;
 mod n485;
+mod n704;
 mod n724;
 mod n876;
 mod n977;
