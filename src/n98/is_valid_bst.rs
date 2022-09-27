@@ -19,7 +19,27 @@ impl TreeNode {
     }
 }
 
+//in order traversal
 pub fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
+    let mut values = vec![];
+    in_order(&root, &mut values);
+
+    values
+        .iter()
+        .zip(values.iter().skip(1))
+        .all(|(x1, x2)| x1 < x2)
+}
+
+fn in_order(node: &Option<Rc<RefCell<TreeNode>>>, values: &mut Vec<i32>) {
+    if let Some(node) = node {
+        let node_ref = node.borrow();
+        in_order(&node_ref.left, values);
+        values.push(node_ref.val);
+        in_order(&node_ref.right, values);
+    }
+}
+
+pub fn is_valid_bst_naive(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
     let mut valid = true;
     dfs(root, i64::MIN, i64::MAX, &mut valid);
     return valid;
@@ -43,26 +63,3 @@ fn dfs(node: Option<Rc<RefCell<TreeNode>>>, min: i64, max: i64, valid: &mut bool
         }
     }
 }
-
-// use std::cell::RefCell;
-// use std::rc::Rc;
-// impl Solution {
-//     pub fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-//         let mut values = vec![];
-//         in_order(&root, &mut values);
-//
-//         values
-//             .iter()
-//             .zip(values.iter().skip(1))
-//             .all(|(x1, x2)| x1 < x2)
-//     }
-// }
-//
-// fn in_order(node: &Option<Rc<RefCell<TreeNode>>>, values: &mut Vec<i32>) {
-//     if let Some(node) = node {
-//         let node_ref = node.borrow();
-//         in_order(&node_ref.left, values);
-//         values.push(node_ref.val);
-//         in_order(&node_ref.right, values);
-//     }
-// }
