@@ -10,84 +10,24 @@ pub fn flood_fill(image: Vec<Vec<i32>>, sr: i32, sc: i32, color: i32) -> Vec<Vec
     while !queue.is_empty() {
         let (x, y) = queue.pop_front().unwrap();
         res[x][y] = color;
-        let mut row = res[x].clone();
-        left_check_row(
-            &mut res,
-            &mut visited,
-            &mut queue,
-            x,
-            y,
-            target_color,
-            color,
-        );
-        right_check_row(
-            &mut res,
-            &mut visited,
-            &mut queue,
-            x,
-            y,
-            target_color,
-            color,
-        );
+        if y < res[0].len() - 1 && !visited.contains(&(x, y + 1)) && res[x][y + 1] == target_color {
+            queue.push_back((x, y + 1));
+            visited.insert((x, y + 1));
+        }
+        if y > 0 && !visited.contains(&(x, y - 1)) && res[x][y - 1] == target_color {
+            queue.push_back((x, y - 1));
+            visited.insert((x, y - 1));
+        }
+        if x > 0 && !visited.contains(&(x - 1, y)) && res[x - 1][y] == target_color {
+            queue.push_back((x - 1, y));
+            visited.insert((x - 1, y));
+        }
+        if x < res.len() - 1 && !visited.contains(&(x + 1, y)) && res[x + 1][y] == target_color {
+            queue.push_back((x + 1, y));
+            visited.insert((x + 1, y));
+        }
     }
-
     res
-}
-
-fn left_check_row(
-    image: &mut Vec<Vec<i32>>,
-    visited: &mut HashSet<(usize, usize)>,
-    queue: &mut VecDeque<(usize, usize)>,
-    x: usize,
-    y: usize,
-    target_color: i32,
-    color: i32,
-) {
-    let mut recursive = false;
-    if y > 0 && !visited.contains(&(x, y - 1)) && image[x][y - 1] == target_color {
-        image[x][y - 1] = color;
-        visited.insert((x, y - 1));
-        recursive = true;
-    }
-    if x > 0 && !visited.contains(&(x - 1, y)) && image[x - 1][y] == target_color {
-        queue.push_back((x - 1, y));
-        visited.insert((x - 1, y));
-    }
-    if x < image.len() - 1 && !visited.contains(&(x + 1, y)) && image[x + 1][y] == target_color {
-        queue.push_back((x + 1, y));
-        visited.insert((x + 1, y));
-    }
-    if recursive {
-        left_check_row(image, visited, queue, x, y - 1, target_color, color);
-    }
-}
-
-fn right_check_row(
-    image: &mut Vec<Vec<i32>>,
-    visited: &mut HashSet<(usize, usize)>,
-    queue: &mut VecDeque<(usize, usize)>,
-    x: usize,
-    y: usize,
-    target_color: i32,
-    color: i32,
-) {
-    let mut recursive = false;
-    if y < image[0].len() - 1 && !visited.contains(&(x, y + 1)) && image[x][y + 1] == target_color {
-        image[x][y + 1] = color;
-        visited.insert((x, y + 1));
-        recursive = true;
-    }
-    if x > 0 && !visited.contains(&(x - 1, y)) && image[x - 1][y] == target_color {
-        queue.push_back((x - 1, y));
-        visited.insert((x - 1, y));
-    }
-    if x < image.len() - 1 && !visited.contains(&(x + 1, y)) && image[x + 1][y] == target_color {
-        queue.push_back((x + 1, y));
-        visited.insert((x + 1, y));
-    }
-    if recursive {
-        right_check_row(image, visited, queue, x, y + 1, target_color, color);
-    }
 }
 
 #[cfg(test)]
