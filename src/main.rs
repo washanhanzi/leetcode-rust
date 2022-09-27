@@ -6,6 +6,7 @@ mod n1480;
 mod n205;
 mod n206;
 mod n21;
+mod n235;
 mod n278;
 mod n392;
 mod n409;
