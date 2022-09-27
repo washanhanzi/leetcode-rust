@@ -1,10 +1,12 @@
 # leetCode-rust
 
 - [21. Merge Two Sorted Lists](./src/n21/merge_two_lists.rs)
+- [98. Validate Binary Search Tree](./src/n98/is_valid_bst.rs)
 - [102. Binary Tree Level Order Traversal](./src/n102/level_order.rs)
 - [121. Best Time to Buy and Sell Stock]()
 - [205. Isomorphic Strings](./src/n205/is_isomorphic.rs)
 - [206. Reverse Linked List](./src/n206/reverse_list.rs)
+- [278. First Bad Version](./src/n278/first_bad_version.rs)
 - [392. Is Subsequence](./src/n392)
 - [409. Longest Palindrome](./src/n409/longest_palindrome.rs)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
