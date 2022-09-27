@@ -1,11 +1,11 @@
-// The API isBadVersion is defined for you.
-// isBadVersion(version:i32)-> bool;
-// to call it use self.isBadVersion(version)
+// The API is_bad_version is defined for you.
+// is_bad_version(version:i32)-> bool;
+// to call it use self.is_bad_version(version)
 
 struct ProductTest {}
 
 impl ProductTest {
-    fn isBadVersion(&self, version: i32) -> bool {
+    fn is_bad_version(&self, version: i32) -> bool {
         true
     }
     pub fn first_bad_version(&self, n: i32) -> i32 {
@@ -13,7 +13,7 @@ impl ProductTest {
         while low < high {
             //mid = (low + high)/2 will cause overflow
             let mid = low + (high - low) / 2;
-            if self.isBadVersion(mid) {
+            if self.is_bad_version(mid) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
