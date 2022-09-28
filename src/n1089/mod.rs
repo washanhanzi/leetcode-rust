@@ -1,1 +1,1 @@
-mod duplicate_zeros;
+pub mod duplicate_zeros;

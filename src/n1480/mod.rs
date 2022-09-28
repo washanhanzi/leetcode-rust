@@ -1,1 +1,1 @@
-mod running_sum;
+pub mod running_sum;

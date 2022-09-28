@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-fn fib(n: i32) -> i32 {
+pub fn fib(n: i32) -> i32 {
     if n == 0 {
         return 0;
     }
@@ -10,7 +10,7 @@ fn fib(n: i32) -> i32 {
     fib(n - 1) + fib(n - 2)
 }
 
-fn fib_with_hash_map(n: i32) -> i32 {
+pub fn fib_with_hash_map(n: i32) -> i32 {
     let mut map: HashMap<i32, i32> = HashMap::new();
     map.insert(0, 0);
     map.insert(1, 1);
@@ -25,7 +25,7 @@ fn fib_with_hash_map(n: i32) -> i32 {
     return *map.get(&n).unwrap();
 }
 
-fn fib_with_vec(n: i32) -> i32 {
+pub fn fib_with_vec(n: i32) -> i32 {
     if n == 0 {
         return 0;
     }

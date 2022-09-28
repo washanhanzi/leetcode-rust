@@ -1,25 +1,21 @@
-mod n102;
-mod n1089;
-mod n121;
-mod n1295;
-mod n1480;
-mod n205;
-mod n206;
-mod n21;
-mod n235;
-mod n278;
-mod n392;
-mod n409;
-mod n485;
-mod n509;
-mod n70;
-mod n704;
-mod n724;
-mod n733;
-mod n876;
-mod n977;
-mod n98;
-
-fn main() {
-    println!("Hello, LeetCode!");
-}
+pub mod n102;
+pub mod n1089;
+pub mod n121;
+pub mod n1295;
+pub mod n1480;
+pub mod n205;
+pub mod n206;
+pub mod n21;
+pub mod n235;
+pub mod n278;
+pub mod n392;
+pub mod n409;
+pub mod n485;
+pub mod n509;
+pub mod n70;
+pub mod n704;
+pub mod n724;
+pub mod n733;
+pub mod n876;
+pub mod n977;
+pub mod n98;

@@ -1,2 +1,2 @@
 pub mod entity;
-mod merge_two_lists;
+pub mod merge_two_lists;

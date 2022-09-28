@@ -1,1 +1,1 @@
-mod first_bad_version;
+pub mod first_bad_version;

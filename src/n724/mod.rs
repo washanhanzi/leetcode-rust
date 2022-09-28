@@ -1,1 +1,1 @@
-mod pivot_index;
+pub mod pivot_index;

@@ -1,1 +1,1 @@
-mod sorted_squares;
+pub mod sorted_squares;

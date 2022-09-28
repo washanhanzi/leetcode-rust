@@ -2,10 +2,10 @@
 // is_bad_version(version:i32)-> bool;
 // to call it use self.is_bad_version(version)
 
-struct ProductTest {}
+pub struct ProductTest {}
 
 impl ProductTest {
-    fn is_bad_version(&self, _: i32) -> bool {
+    pub fn is_bad_version(&self, _: i32) -> bool {
         true
     }
     pub fn first_bad_version(&self, n: i32) -> i32 {

@@ -1,1 +1,1 @@
-mod fib;
+pub mod fib;
