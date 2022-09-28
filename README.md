@@ -1,6 +1,7 @@
 # leetCode-rust
 
 - [21. Merge Two Sorted Lists](./src/n21/merge_two_lists.rs)
+- [70. Climbing Stairs](./src/n70/climb_stairs.rs)
 - [98. Validate Binary Search Tree](./src/n98/is_valid_bst.rs)
 - [102. Binary Tree Level Order Traversal](./src/n102/level_order.rs)
 - [121. Best Time to Buy and Sell Stock]()
@@ -10,6 +11,7 @@
 - [392. Is Subsequence](./src/n392)
 - [409. Longest Palindrome](./src/n409/longest_palindrome.rs)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
+- [509. Fibonacci Number](./src/n509/fib.rs)
 - [704. Binary Search](./src/n704/search.rs)
 - [724. Find Pivot Index](./src/n724/pivot_index.rs)
 - [733. Flood Fill](./src/n733/flood_fill.rs)

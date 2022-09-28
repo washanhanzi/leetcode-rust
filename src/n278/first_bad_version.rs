@@ -5,7 +5,7 @@
 struct ProductTest {}
 
 impl ProductTest {
-    fn is_bad_version(&self, version: i32) -> bool {
+    fn is_bad_version(&self, _: i32) -> bool {
         true
     }
     pub fn first_bad_version(&self, n: i32) -> i32 {

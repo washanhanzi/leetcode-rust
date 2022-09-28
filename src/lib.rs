@@ -11,6 +11,8 @@ mod n278;
 mod n392;
 mod n409;
 mod n485;
+mod n509;
+mod n70;
 mod n704;
 mod n724;
 mod n733;
