@@ -12,6 +12,7 @@ pub mod n392;
 pub mod n409;
 pub mod n485;
 pub mod n509;
+pub mod n62;
 pub mod n70;
 pub mod n704;
 pub mod n724;

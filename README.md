@@ -1,6 +1,7 @@
 # leetCode-rust
 
 - [21. Merge Two Sorted Lists](./src/n21/merge_two_lists.rs)
+- [62. Unique Paths](./src/n62/unique_paths.rs)
 - [70. Climbing Stairs](./src/n70/climb_stairs.rs)
 - [98. Validate Binary Search Tree](./src/n98/is_valid_bst.rs)
 - [102. Binary Tree Level Order Traversal](./src/n102/level_order.rs)
