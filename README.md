@@ -11,6 +11,7 @@
 - [278. First Bad Version](./src/n278/first_bad_version.rs)
 - [392. Is Subsequence](./src/n392)
 - [409. Longest Palindrome](./src/n409/longest_palindrome.rs)
+- [438. Find All Anagrams in a String](./src/n438/find_anagrams.rs)
 - [485. Max Consecutive Ones](./src/n485/find_max_consecutive_ones.rs)
 - [509. Fibonacci Number](./src/n509/fib.rs)
 - [704. Binary Search](./src/n704/search.rs)
