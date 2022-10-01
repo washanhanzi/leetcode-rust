@@ -14,6 +14,7 @@
 - [509. Fibonacci Number](./src/n509/fib.rs)
 - [704. Binary Search](./src/n704/search.rs)
 - [724. Find Pivot Index](./src/n724/pivot_index.rs)
+- [746. Min Cost Climbing Stairs](./src/n746/min_cost_climbing_stairs.rs)
 - [733. Flood Fill](./src/n733/flood_fill.rs)
 - [876. Middle of the Linked List](./src/)
 - [977. Squares of a Sorted Array](./src/n977/sorted_squares.rs)

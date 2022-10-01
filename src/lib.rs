@@ -16,6 +16,7 @@ pub mod n70;
 pub mod n704;
 pub mod n724;
 pub mod n733;
+pub mod n746;
 pub mod n876;
 pub mod n977;
 pub mod n98;
