@@ -6,7 +6,6 @@ pub fn character_replacement(s: String, k: i32) -> i32 {
     let mut longest_len = 0;
     let mut frequency: HashMap<char, usize> = HashMap::with_capacity(s.len());
     let mut map: HashMap<usize, char> = HashMap::with_capacity(s.len());
-    let mut start = char::default();
 
     for (i, c) in s.chars().enumerate() {
         map.insert(i, c);
