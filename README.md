@@ -9,6 +9,7 @@
 - [205. Isomorphic Strings](./src/n205/is_isomorphic.rs)
 - [206. Reverse Linked List](./src/n206/reverse_list.rs)
 - [278. First Bad Version](./src/n278/first_bad_version.rs)
+- [299. Bulls and Cows](./src/n299/get_hint.rs)
 - [392. Is Subsequence](./src/n392)
 - [409. Longest Palindrome](./src/n409/longest_palindrome.rs)
 - [438. Find All Anagrams in a String](./src/n438/find_anagrams.rs)
